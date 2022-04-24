@@ -1,0 +1,10 @@
+*.log
+texput.log
+*.synctex.gz
+*.run.xml
+*.bcf
+*.aux
+*.xmpi
+*.out
+*.pdf
+*.~$*

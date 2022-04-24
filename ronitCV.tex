@@ -1,0 +1,201 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.6.4, 13 Nov 2021) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=1cm,top=1.25cm,bottom=1.25cm,columnsep=1cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num.cfg}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Ronit Kumar}
+\tagline{}
+\photoR{2.5cm}{Shiva}
+\personalinfo{%
+  \location{India}
+  \homepage{ronit.sh}
+  \github{ronit-sh} 
+  \email{ronit@siva.sh}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Director}{SivaShakti FutureTech Private Limited, siva.sh}{October 2021 -- Ongoing}{Varanasi, India}
+\begin{itemize}
+\item \textbf{Researched and developed the platform leveraging the React ecosystem.}
+\item Created the Vishwakarma Design System, used across all platforms, for consistent UI/UX. Implemented light/dark modes, font-size change, custom scroll-bars, among other components using Radix-UI and Tailwind CSS for maximum accessibility. 
+\item Created a live editor to manipulate the platform's content. The editor uses WebSockets to always stay uptodate with the latest changes, and notify when multiple editors are editing the same page.
+\item Led the creation of advanced tools to view and analyze platform content in multiple languages. Also created visx components to view data insights.
+\item Implemented comprehensive user-management, using Supabase, and privacy-focused analytics solution using Splitbee. 
+\item Researched, designed and created a relay-compliant GraphQL API, using Hasura. The API sits atop a PostgreSQL database. Also created an out-of-table trigger-based automated auditing solution for critical data.
+\item For efficient data plumbing, used a combination of Relay and Recoil for local and global state management. Relay is used to fetch page data and maintain global state. Advanced Recoil APIs are used to sync some local state with localStorage.
+\item Used Nextjs for hybrid static and server rendering, TypeScript support, smart bundling, route pre-fetching, and more.
+\item Implemented comprehensive end-to-end (e2e) testing using Cypress.
+\item \textbf{Stack : React, TypeScript, pnpm, Nextjs, Hasura, Supabase, Relay, Recoil, Radix-UI, Tailwind CSS, visx, Splitbee, Cypress, Vercel, WebStorm}
+\end{itemize}
+
+\bigskip
+
+\cvsection{Certifications}
+\medskip
+\cvachievement{\faTrophy}{Data Scientist with Python}{\textbf{Datacamp}}
+\begin{itemize}
+\smallskip
+\item Supervised Machine Learning
+\item Anaconda Data Science Platform : pandas, numpy, matplotlib, seaborn, sklearn, Jupyter NoteBooks
+\end{itemize}
+
+
+\bigskip
+\cvevent{\cvtag{\textbf{Language Proficiency}}}{}{}{}
+\begin{itemize}
+\item\cvskill{English}{5}
+\smallskip
+\item\cvskill{Hindi}{5}
+\smallskip
+\item\cvskill{Sanskrit}{2}
+\end{itemize}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+% \newpage
+
+% \cvsection{Publications}
+
+% \nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+%\divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}}, type=article]
+
+%\divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{Master of Science in
+	Computer Science}{California State University,
+	Long Beach}{2017 -- 2019}{USA}
+	
+\bigskip
+
+\cvsection{Strengths}
+
+\cvevent{Hardware Development}{ARM Assembly, Verilog, iverilog, GTKWave, Sigasi Studio}{}{}
+
+\cvevent{Application Development}{Java, junit, IntelliJ IDEA, C, C++, CLion}{}{}
+
+\cvevent{Data Science}{python3, pandas, numpy, matplotlib, seaborn, sklearn, Spyder, PyCharm, Jupyter Notebook, JupyterLab}{}{}
+
+\cvevent{Web Development}{TypeScript, deno, nodejs, pnpm, yarn, React, Radix-UI, Nextjs, Tailwind CSS, visx, Relay, Recoil, WebStorm}{}{}
+
+\cvevent{Shell, Automation, Development}{bash, zsh, TeamCity Cloud, GitHub Actions, Vercel, JetBrains Space, Hasura, Supabase}{}{}
+
+\cvevent{Database Management Systems}{PostgreSQL, MySQL, MongoDB}{}{}
+
+\cvevent{Analytics, Testing}{Splitbee, Cypress}{}{}
+
+% \cvevent{Functional languages}{Haskell}{}{}
+
+\cvevent{Cloud Solutions}{ Amazon Web Services (aws), Google Cloud Platform (gcp)}{}{}
+
+\cvevent{Multimedia and Design}{Adobe Creative Cloud, Framer, Figma}{}{}
+
+\bigskip
+
+\cvsection{Referees}
+
+\medskip
+\cvref{\textbf{Dr. Jelena Trajkovic}}{California State University, Long Beach}{jelena.trajkovic@csulb.edu}
+\bigskip
+\cvref{\textbf{Dr. Claus Jürgensen}}{California State University, Long Beach}{claus.jurgensen@csulb.edu}
+
+\end{paracol}
+
+\end{document}
