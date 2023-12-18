@@ -26,16 +26,16 @@
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
 
-\usepackage{xltxtra}
+%\usepackage{xltxtra}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
   % If using xelatex or lualatex:
-  \setmainfont{Overpass Regular}
+  \setmainfont{lato}
 \else
   % If using pdflatex:
-  \usepackage[default]{Overpass Regular}
+  \usepackage[default]{lato}
 \fi
 
 % Change the colours if you want to
@@ -65,7 +65,7 @@
 %% Use (and optionally edit if necessary) this .cfg if you
 %% want to use an author-year reference style like APA(6)
 %% for your publication list
-\input{pubs-authoryear.cfg}
+%\input{pubs-authoryear.cfg}
 
 %% Use (and optionally edit if necessary) this .cfg if you
 %% want an originally numerical reference style like IEEE
@@ -73,7 +73,7 @@
 % \input{pubs-num.cfg}
 
 %% sample.bib contains your publications
-\addbibresource{sample.bib}
+%\addbibresource{sample.bib}
 
 \begin{document}
 \name{Ronit Kumar}
@@ -103,21 +103,25 @@
 \cvevent{Director}{SivaShakti FutureTech Private Limited, siva.sh}{October 2021 -- Ongoing}{Varanasi, India}
 \begin{itemize}
 \item \textbf{Researched and developed the Software as a Service (SaaS) platform leveraging the React ecosystem.}
-\item Created the Vishwakarma Design System, used across all platforms, for consistent UI/UX. Implemented light/dark modes, font-size change, custom scroll-bars, among other components using Radix-UI and Tailwind CSS for maximum accessibility.
+\item Created the Vishwakarma Design System, used across all platforms, for consistent UI/UX.
+      Implemented light/dark modes, font-size change, custom scroll-bars, among other components using Radix-UI and Tailwind CSS for maximum accessibility.
 \item Created a live editor to manipulate the platform's content.
       The editor uses WebSockets to always stay up-to-date with the latest changes, and notify when multiple editors are editing the same page.
-\item Led the creation of advanced tools to view and analyze platform content in multiple languages. Also created visx components to view data insights.
+\item Led the creation of advanced tools to view and analyze platform content in multiple languages.
+      Also created visx components to view data insights.
 \item Implemented comprehensive user-management, using Supabase, and privacy-focused analytics solution using Splitbee.
 \item Researched, designed and created a relay-compliant GraphQL API, using Hasura.
-      The API sits atop a PostgreSQL database. Also created an automated out-of-table trigger-based auditing solution for critical data.
-\item For efficient data plumbing and state management, used a combination of Relay and Recoil.
+      The API sits atop a PostgreSQL database.
+      Also created an automated out-of-table trigger-based auditing solution for critical data.
+\item For efficient data plumbing and state management, used a combination of Relay and jotai.
       Relay is used to fetch page data and maintain global state.
 \item jotai is used to sync some local state with localStorage.
 \item Used Nextjs for hybrid static and server rendering, TypeScript support, smart bundling, route pre-fetching, and more.
 \item Integrated with Zoho One to drive subscription support and provide banking and auditing platform.
-\item Created sivagpt by integrating with Weaviate and allowing users to ask question using natural language.
+\item Created sivaGPT which allows users to ask questions using natural language.
       Users get answers with references powered by Weaviate hybrid search and OpenAI GPT 4.
-\item Implemented comprehensive end-to-end (e2e) testing using Cypress. Created github-action to test each dev build post deployment.
+\item Implemented comprehensive end-to-end (e2e) testing using Cypress.
+      Created github-action to test each dev build post deployment.
 \item \textbf{Stack: React, TypeScript, pnpm, Nextjs, Hasura, Supabase, Relay, jotai, Radix-UI, Tailwind CSS, visx, Splitbee, Cypress, Vercel, Weaviate, Zoho One, WebStorm}
 \end{itemize}
 

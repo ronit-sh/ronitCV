@@ -11,7 +11,7 @@ jobs:
       with:
         root_file: ronitCV.tex
         extra_fonts: ./overpass.ttf
-        latexmk_use_xelatex: true
+#        latexmk_use_xelatex: true
 
     - uses: actions/upload-artifact@v4
       with:
