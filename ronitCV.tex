@@ -26,15 +26,16 @@
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
 
+\usepackage{xltxtra}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
   % If using xelatex or lualatex:
-  \setmainfont{lato}
+  \setmainfont{Overpass Regular}
 \else
   % If using pdflatex:
-  \usepackage[default]{lato}
+  \usepackage[default]{Overpass Regular}
 \fi
 
 % Change the colours if you want to
@@ -103,15 +104,21 @@
 \begin{itemize}
 \item \textbf{Researched and developed the Software as a Service (SaaS) platform leveraging the React ecosystem.}
 \item Created the Vishwakarma Design System, used across all platforms, for consistent UI/UX. Implemented light/dark modes, font-size change, custom scroll-bars, among other components using Radix-UI and Tailwind CSS for maximum accessibility.
-\item Created a live editor to manipulate the platform's content. The editor uses WebSockets to always stay uptodate with the latest changes, and notify when multiple editors are editing the same page.
+\item Created a live editor to manipulate the platform's content.
+      The editor uses WebSockets to always stay up-to-date with the latest changes, and notify when multiple editors are editing the same page.
 \item Led the creation of advanced tools to view and analyze platform content in multiple languages. Also created visx components to view data insights.
 \item Implemented comprehensive user-management, using Supabase, and privacy-focused analytics solution using Splitbee.
-\item Researched, designed and created a relay-compliant GraphQL API, using Hasura. The API sits atop a PostgreSQL database. Also created an automated out-of-table trigger-based auditing solution for critical data.
-\item For efficient data plumbing and state management, used a combination of Relay and Recoil. Relay is used to fetch page data and maintain global state. Advanced Recoil APIs are used to sync some local state with localStorage.
+\item Researched, designed and created a relay-compliant GraphQL API, using Hasura.
+      The API sits atop a PostgreSQL database. Also created an automated out-of-table trigger-based auditing solution for critical data.
+\item For efficient data plumbing and state management, used a combination of Relay and Recoil.
+      Relay is used to fetch page data and maintain global state.
+\item jotai is used to sync some local state with localStorage.
 \item Used Nextjs for hybrid static and server rendering, TypeScript support, smart bundling, route pre-fetching, and more.
 \item Integrated with Zoho One to drive subscription support and provide banking and auditing platform.
+\item Created sivagpt by integrating with Weaviate and allowing users to ask question using natural language.
+      Users get answers with references powered by Weaviate hybrid search and OpenAI GPT 4.
 \item Implemented comprehensive end-to-end (e2e) testing using Cypress. Created github-action to test each dev build post deployment.
-\item \textbf{Stack: React, TypeScript, pnpm, Nextjs, Hasura, Supabase, Relay, Recoil, Radix-UI, Tailwind CSS, visx, Splitbee, Cypress, Vercel, WebStorm, Zoho One}
+\item \textbf{Stack: React, TypeScript, pnpm, Nextjs, Hasura, Supabase, Relay, jotai, Radix-UI, Tailwind CSS, visx, Splitbee, Cypress, Vercel, Weaviate, Zoho One, WebStorm}
 \end{itemize}
 
 \bigskip

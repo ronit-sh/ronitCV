@@ -8,3 +8,4 @@ texput.log
 *.out
 *.pdf
 *.~$*
+.idea
