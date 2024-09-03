@@ -9,3 +9,6 @@ texput.log
 *.pdf
 *.~$*
 .idea
+*.blg
+*.lua
+*.bbl
