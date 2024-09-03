@@ -1,4 +1,4 @@
-name: Upload pdf file
+name: Create pdf
 on: [push]
 jobs:
   upload_pdf:
