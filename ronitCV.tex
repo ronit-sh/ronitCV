@@ -14,7 +14,6 @@
 
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
-
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
 %% AltaCV uses the fontawesome5 package.
@@ -25,14 +24,13 @@
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
-\usepackage{xltxtra}
+% \usepackage{xltxtra}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
   % If using xelatex or lualatex:
-  \setmainfont{Overpass-Regular}
-  
+  \setmainfont{Overpass}
 \else
   % If using pdflatex:
   \usepackage[default]{lato}
@@ -102,7 +100,7 @@
 
 \cvevent{Director}{SivaShakti FutureTech Private Limited}{October 2021 -- Ongoing}{Varanasi, India}
 \begin{itemize}
-\item \textbf{Researched and developed the Software as a Service (SaaS) platform \textbf{siva.sh} leveraging the React ecosystem.}
+\item \textbf{Researched and developed the Software as a Service (SaaS) platform \textit{siva.sh} leveraging the React ecosystem.}
 \item Created the Vishwakarma Design System, used across all platforms, for consistent UI/UX.
       Implemented light/dark modes, font-size change, custom scroll-bars, among other components using Radix-UI and Tailwind CSS for maximum accessibility.
 \item Created a CMS to update the platform's content. The CMS provides an enhanced in-context visual editor to add and edit content.
