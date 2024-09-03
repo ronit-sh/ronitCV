@@ -10,8 +10,8 @@ jobs:
       uses: xu-cheng/latex-action@v3
       with:
         root_file: ronitCV.tex
-        extra_fonts: ./overpass.ttf
-#        latexmk_use_xelatex: true
+        extra_fonts: ./fonts
+        latexmk_use_xelatex: true
 
     - uses: actions/upload-artifact@v4
       with:
