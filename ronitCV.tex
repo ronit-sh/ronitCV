@@ -26,15 +26,16 @@
 \usepackage{paracol}
 % \usepackage{xltxtra}
 
-% Change the font if you want to, depending on whether
-% you're using pdflatex or xelatex/lualatex
-\ifxetexorluatex
+\iftutex
   % If using xelatex or lualatex:
   \setmainfont{Overpass}
+  \renewcommand{\familydefault}{\sfdefault}
 \else
   % If using pdflatex:
-  \usepackage[default]{lato}
-  \usepackage{hyperref}
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
 \fi
 
 % Change the colours if you want to
