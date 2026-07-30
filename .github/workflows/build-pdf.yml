@@ -4,10 +4,10 @@ jobs:
   build_pdf:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4.4.0
+    - uses: actions/checkout@v7.0.1
 
     - name: Compile LaTeX document
-      uses: xu-cheng/latex-action@v4
+      uses: xu-cheng/latex-action@v4.1.0
       with:
         root_file: ronitCV.tex
         extra_fonts: ./fonts
